@@ -4,10 +4,18 @@ My personal Claude Code setup, so every laptop gets the same environment.
 
 ## New laptop
 
+**Windows**
 ```powershell
 git clone https://github.com/sduprey/my_claude_configuration.git ; cd my_claude_configuration
 .\sync.ps1 import
 claude   # accepts the plugin install prompt from settings.json
+```
+
+**macOS / Linux**
+```bash
+git clone https://github.com/sduprey/my_claude_configuration.git && cd my_claude_configuration
+./sync.sh import
+claude
 ```
 
 `import` backs up whatever is in `~/.claude` to `~/.claude/backups/sync-<date>` first.
@@ -15,7 +23,7 @@ claude   # accepts the plugin install prompt from settings.json
 ## Changed something? Save it
 
 ```powershell
-.\sync.ps1 export
+.\sync.ps1 export      # or ./sync.sh export on a Mac
 git add -A ; git commit -m "update config" ; git push
 ```
 
@@ -38,4 +46,4 @@ Org plugins (engineering, data, keyrus-*, etc.) and connectors come from the cla
 
 ## Never committed
 
-`.credentials.json`, sessions, projects, history, caches - `sync.ps1` only copies the files listed above.
+`.credentials.json`, sessions, projects, history, caches - `sync.ps1` / `sync.sh` only copy the files listed above.
