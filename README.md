@@ -1,11 +1,11 @@
-# claude-config
+# my_claude_configuration
 
 My personal Claude Code setup, so every laptop gets the same environment.
 
 ## New laptop
 
 ```powershell
-git clone <this repo> ; cd claude-config
+git clone https://github.com/sduprey/my_claude_configuration.git ; cd my_claude_configuration
 .\sync.ps1 import
 claude   # accepts the plugin install prompt from settings.json
 ```
